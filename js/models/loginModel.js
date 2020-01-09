@@ -1,23 +1,27 @@
-var LoginModel = function(conection){
-	//this.event = Event;
-	this.loginSuccessfull = new Event(this);
-//	this.loginSuccessfull = require('./../events');
-	this.con = conection;
+var con = require('./../server');
+
+login = function(req,res){
+	var user = req.body;
+	var userNickName = user.userNickName;
+	var userPass = user.userPass;
+	var sqlQuery = 'select * from users where user_nickName = ? and user_pass = ? ;';
+
+	con.query(sqlQuery,[userNickName, userPass],function(err, result, fields){
+		if(err) { 
+			res.status(404).send(err, "be an error in your sql query");
+		}else if(result.length<1){
+			res.send(console.log('no result')); 
+		}else{
+			var myResult = {userNickName : result[0].user_nickName} 
+			console.log(result[0].user_nickName)
+			res.send(myResult);
+		}
+		
+	});
 }
 
-LoginModel.prototype = {
-	login : function(userNickName, pass){
-		var sqlQuery = 'select * from users where user_nickName = ? and user_password = ?';
-		var result;
-		con.query(sqlQuery, [userNickName], [pass], function(error, result, fields){
-			console.log(result);
-		});
-		this.loginSuccessfull.notify();
-		return result;
-	},
-}
-/*
 module.exports = {
-	loginModel : loginModel = new LoginModel(conection)
+	login : login
 }
-*/
+
+

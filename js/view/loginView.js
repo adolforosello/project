@@ -1,14 +1,27 @@
-var LoginView = function(controller, model){
-	this.controller = controller;
-	this.model = model;
-	var that = this;
-	this.userNickName = document.getElementById('userNickName');
-	this.userPass = document.getElementById('userPass');
+var LoginView = function(/*controller, model*/){
+	//this.controller = controller;
+	//this.model = model;
 	
+	this.loginButton = document.getElementById('loginButton');
+	this.loginButton.addEventListener("click",this.login);
 }
 
 LoginView.prototype = {
 	login : function(){
-		this.controller.login(userNickName,pass);
+		
+		var userData = {
+			userNickName : document.getElementById('userNickName').value,
+			userPass : document.getElementById('userPass').value
+		};
+
+		$.post('http://localhost:8080/login',userData,function(data){
+			if (data.userNickName) {
+				localStorage.setItem('user',JSON.stringify(data));
+				location.href = '../html/index.html';
+			}else{
+
+			}
+			
+		});
 	}
 }

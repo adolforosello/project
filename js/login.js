@@ -1,0 +1,1 @@
+var loginView = new LoginView();
