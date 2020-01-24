@@ -1,19 +1,23 @@
-
 var IndexModel = function(){
-	this.user = JSON.parse(localStorage.getItem('user'));
-	this.userChecked = new Event(this);
+	this.checkUserEvent = new Event(this);
 	this.loginSuccessful = new Event(this);
+	this.user;
 };
 
 IndexModel.prototype = {
 	checkUser : function(userNickName){
 		if(this.user == null){
-			this.userChecked.notify();
+			this.checkUserEvent.notify();
+		}else{
+			
 		}
 	},
 	loginSuccessful : function(){
 
+	},
+
+	loadUser : function(){
+		this.user = JSON.parse(localStorage.getItem('user'));
+		
 	}
-
-
 }

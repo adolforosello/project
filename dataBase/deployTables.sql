@@ -18,6 +18,14 @@ CREATE table user_profiles(
 	profile_create_date date
 );
 
+CREATE table usersMovement(
+		userMovement_id int not null auto_increment primary key,
+		userMovement_user_id int not null,
+		userMovement_MovementType varchar(10)  not null,
+		userMovement_date date not null,
+		userMovement_dateTime datetime not null	
+);
+
 INSERT INTO user_profiles(profile_name, profile_create_date)
 	values ("admin", NOW());
 
