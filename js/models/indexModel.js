@@ -5,19 +5,19 @@ var IndexModel = function(){
 };
 
 IndexModel.prototype = {
-	checkUser : function(userNickName){
+	/*checkUser : function(userNickName){
 		if(this.user == null){
 			this.checkUserEvent.notify();
 		}else{
 			
 		}
-	},
+	},*/
 	loginSuccessful : function(){
 
 	},
 
 	loadUser : function(){
 		this.user = JSON.parse(localStorage.getItem('user'));
-		
-	}
+		this.checkUserEvent.notify();
+		}
 }

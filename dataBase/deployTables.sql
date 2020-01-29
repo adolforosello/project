@@ -26,6 +26,16 @@ CREATE table usersMovement(
 		userMovement_dateTime datetime not null	
 );
 
+CREATE table turns(
+	turn_id int not null auto_increment primary key,
+	turn_customer_id int not null,
+	turn_date date,
+	turn_hour time,
+	turn_note varchar(50),
+	turn_create_date datetime,
+	deteted boolean not null 
+);
+
 INSERT INTO user_profiles(profile_name, profile_create_date)
 	values ("admin", NOW());
 

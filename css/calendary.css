@@ -1,0 +1,21 @@
+table tr td {
+  text-align: center;
+  border: 1px solid black;
+  min-width:  70px;
+  height: 30px;
+}
+
+table#hourPannel-table tr td{
+  min-width:  140px;
+}
+
+div#calendary{
+  float: left;
+}
+
+td.dayMarkerClassSelected{
+  background-color: green;
+}
+td.dayMarkerClassUnselected{
+
+}

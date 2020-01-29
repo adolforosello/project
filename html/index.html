@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/calendary.css">
 
 </head>
 <body>
@@ -39,8 +40,36 @@
 			</div>
 				
 			<div id="calendary">
-				Calendary
-			</div>
+				<label class="laberForm">Customer</label>
+				<input type="test" name="" id="customer">
+
+				<label class="laberForm">Date</label>
+				<input type="date" name="" id="dateTurn">
+
+				<label class="laberForm">Note</label>
+				<input type="text" name="" id="noteTurn">
+				<input type="button" name="" value="ADD TURN" id="addTurnButton">
+				<input type="" name=""  value="DELETE TURN" id="deleteTurnButton">
+			<!--<table class="calendary">
+				<tr class="header">
+					<td colspan="7" id="yearNumber"></td>
+				</tr>
+				<tr class="header" id="month">
+					<td id="monthDecrement"><</td>
+					<td colspan="5" id="monthName"></td>
+					<td id="monthIncrement">></td>
+				</tr>	
+				<tr class="header">
+					<td id="7">Domingo</td>
+					<td id="1">Lunes</td>
+					<td id="2">Martes</td>
+					<td id="3">Miercoles</td>
+					<td id="4">Jueves</td>
+					<td id="5">Viernes</td>
+					<td id="6">Sabado</td>
+				</tr>	
+			</table>-->
+		</div>
 		</div>
 	</content>
 
@@ -49,9 +78,19 @@
 	</footer>
 	<script type="text/javascript" src="../js/libreries/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="../js/events.js"></script>
+	
 	<script type="text/javascript" src="../js/models/indexModel.js"></script>
 	<script type="text/javascript" src="../js/controllers/indexController.js"></script>
 	<script type="text/javascript" src="../js/view/indexView.js"></script>
 	<script type="text/javascript" src="../js/index.js"></script>
+
+	<script type="text/javascript" src="../js/controllers/logController.js"></script>
+	<script type="text/javascript" src="../js/view/logView.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
+
+	<script type="text/javascript" src="../js/view/calendary.js"></script>
+
+	<script type="text/javascript" src="../js/controllers/turnController.js"></script>
+	<script type="text/javascript" src="../js/view/turnsView.js"></script>
 </body>
 </html>
