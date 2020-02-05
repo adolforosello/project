@@ -8,6 +8,7 @@ CREATE table users(
 	user_address_id int,
 	user_profile_id int not null,
 	user_create_date date not null,
+	user_loged boolean not null,
 	user_deleted boolean not null
 	
 );
@@ -15,24 +16,24 @@ CREATE table users(
 CREATE table user_profiles(
 	profile_id int not null auto_increment primary key,
 	profile_name varchar(20) not null,
-	profile_create_date date
+	profile_update datetime 
 );
 
 CREATE table usersMovement(
 		userMovement_id int not null auto_increment primary key,
 		userMovement_user_id int not null,
-		userMovement_MovementType varchar(10)  not null,
-		userMovement_date date not null,
+		userMovement_movementType varchar(10)  not null,
 		userMovement_dateTime datetime not null	
 );
 
 CREATE table turns(
 	turn_id int not null auto_increment primary key,
+	turn_user_id int not null,
 	turn_customer_id int not null,
 	turn_date date,
 	turn_hour time,
 	turn_note varchar(50),
-	turn_create_date datetime,
+	turn_update datetime,
 	deteted boolean not null 
 );
 

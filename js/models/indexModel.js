@@ -19,5 +19,6 @@ IndexModel.prototype = {
 	loadUser : function(){
 		this.user = JSON.parse(localStorage.getItem('user'));
 		this.checkUserEvent.notify();
+		return this.user;
 		}
 }

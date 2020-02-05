@@ -7,6 +7,6 @@ IndexController.prototype = {
 		this.model.checkUser(user);
 	}*/
 	loadUser : function(){
-		this.model.loadUser();
+		return this.model.loadUser();
 	}
 }

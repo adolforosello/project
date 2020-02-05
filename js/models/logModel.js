@@ -13,7 +13,7 @@ login = function(req,res){
 			res.send(console.log('no result')); 
 		}else{
 			
-			var sqlQuery2 = 'insert into usersmovement (userMovement_user_id, userMovement_MovementType, userMovement_date, userMovement_datetime) values (?,?,now(),now());';
+			var sqlQuery2 = 'insert into usersmovement (userMovement_user_id, userMovement_MovementType, userMovement_datetime) values (?,?,now());';
 			con.query(sqlQuery2,[result[0].user_id, 'login'],function(err2, result2, fields2){
 					if (err2) {
 						res.status(404).send(err2, "There was an error in your mysql query");
@@ -33,7 +33,7 @@ login = function(req,res){
 
 logOut = function(req, res){
 	var user_id = req.body.user.user_id;
-	var sqlQuery = 'insert into usersmovement (userMovement_user_id, userMovement_MovementType, userMovement_date, userMovement_datetime) values (?,?,now(),now());';
+	var sqlQuery = 'insert into usersmovement (userMovement_user_id, userMovement_movementType, userMovement_datetime) values (?,?,now());';
 		con.query(sqlQuery,[user_id, 'logOut'],function(err, result, fields){
 			if (err) {
 				res.status(404).send(err, "There was an error in your mysql query");

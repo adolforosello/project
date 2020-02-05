@@ -6,7 +6,7 @@ var LogView = function(controller){
 	if(window.location.href == "file:///C:/Users/LENOVO/Desktop/projects/project/html/login.html"){
 		this.loginButton = document.getElementById('loginButton');
 		this.loginButton.addEventListener('click', function(){
-			that.login(that)	
+			that.login(that);
 		});
 	}
 

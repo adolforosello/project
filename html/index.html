@@ -18,14 +18,30 @@
 	<content>
 		<div id="menuOptions">
 			<li class="menu">CLIENTS
-				<ul class="optionMenu">option 1</ul>
-				<ul class="optionMenu">option 2</ul>
-				<ul class="optionMenu">option 3</ul>
+				<ul class="optionMenu">
+					option 1
+				</ul>
+				<ul class="optionMenu">
+					option 2
+				</ul>
+				
 			</li>
 			<li class="menu">TURNS
-				<ul class="optionMenu">option 1</ul>
-				<ul class="optionMenu">option 2</ul>
-				<ul class="optionMenu">option 3</ul>
+				<ul class="optionMenu">
+					<label class="laberForm">Customer</label>
+					<input type="test" name="" id="customer">
+
+					<label class="laberForm">Date</label>
+					<input type="date" name="" id="dateTurn">
+
+					<label class="laberForm">Note</label>
+					<input type="text" name="" id="noteTurn">
+					<input type="button" name="" value="ADD TURN" id="addTurnButton">
+				</ul>
+				<ul class="optionMenu">
+					option 2
+				</ul>
+				
 			</li>
 			
 		</div>
@@ -37,19 +53,13 @@
 				<div id="weekTurns">
 					Week Turns
 				</div>
+				<div id="allTurns">
+					All Turns
+				</div>
 			</div>
 				
 			<div id="calendary">
-				<label class="laberForm">Customer</label>
-				<input type="test" name="" id="customer">
-
-				<label class="laberForm">Date</label>
-				<input type="date" name="" id="dateTurn">
-
-				<label class="laberForm">Note</label>
-				<input type="text" name="" id="noteTurn">
-				<input type="button" name="" value="ADD TURN" id="addTurnButton">
-				<input type="" name=""  value="DELETE TURN" id="deleteTurnButton">
+				<!--<input type="" name=""  value="DELETE TURN" id="deleteTurnButton">-->
 			<!--<table class="calendary">
 				<tr class="header">
 					<td colspan="7" id="yearNumber"></td>
@@ -79,6 +89,9 @@
 	<script type="text/javascript" src="../js/libreries/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="../js/events.js"></script>
 	
+	<script type="text/javascript" src="../js/controllers/turnController.js"></script>
+	<script type="text/javascript" src="../js/view/turnsView.js"></script>
+	
 	<script type="text/javascript" src="../js/models/indexModel.js"></script>
 	<script type="text/javascript" src="../js/controllers/indexController.js"></script>
 	<script type="text/javascript" src="../js/view/indexView.js"></script>
@@ -90,7 +103,5 @@
 
 	<script type="text/javascript" src="../js/view/calendary.js"></script>
 
-	<script type="text/javascript" src="../js/controllers/turnController.js"></script>
-	<script type="text/javascript" src="../js/view/turnsView.js"></script>
 </body>
 </html>
