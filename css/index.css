@@ -2,3 +2,25 @@
 	border: 1px solid black;
 }
 
+div#menuOptions{
+	background-color: green; 
+}
+
+label.emptyErrorMessage{
+	color : red;
+}
+
+div.turnDiv{
+	margin: 0.5%;
+	background-color: red;
+	padding: 1%;
+	border-radius: 20px;
+	width: 300px;
+	float: right;
+}
+
+div#allTurns{
+	width: 100%;
+	min-height: 200px;
+
+}

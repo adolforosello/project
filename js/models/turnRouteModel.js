@@ -25,8 +25,8 @@ function addTurn(req, res){
 }
 
 function loadTurn(req, res){
-
-	var sqlQuery = 'select * from turns where turn_user_id = '+req.params.user_id+' and turn_deleted = 0;';
+	console.log(req.params.user_id)
+	var sqlQuery = 'select * from turns where turn_user_id = '+req.params.user_id+' and turn_deleted = false;';
 	con.query(sqlQuery, function(err, result, field){
 		res.send(result);
 	});

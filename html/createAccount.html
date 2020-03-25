@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+	<div class="accountForm">
+
+		<label for="userName">Name</label>
+		<input type="text" class="accountForm" id="userName" name="userName" required>
+		<label class="emptyErrorMessage" style="display: none" for="userName">Empty field , please complete it</label> 
+
+		<label for="userLastName">Last Name</label>
+		<input type="text" class="accountForm" id="userLastName" name="userLastName" for="userLastName">
+		<label for="userLastName" class="emptyErrorMessage" style="display: none">Empty field , please complete it</label> 
+
+		<label for="userNickName">User Nick Name</label>
+		<input type="text" class="accountForm" id="userNickName" name="userNickName">
+		<label for="userNickName" class="emptyErrorMessage" style="display: none">Empty field , please complete it</label>
+		<label for="userNickName" class="nickNameExistError" style="display: none">NickName Exist</label>
+		
+		<label for="userPass">Password</label>
+		<input type="text" class="accountForm" id="userPass" name="userPass">
+		<label for="userPass" class="emptyErrorMessage" style="display: none">Empty field , please complete it</label>
+		<label for="userPass" class="errorPassword" style="display: none">Passwords is not equal</label>
+
+		
+		<label for="userPass2">Repite Password</label>
+		<input type="text" class="accountForm" id="userPass2" name="userPass2">
+		<label for="userPass2" class="emptyErrorMessage" style="display: none">Empty field , please complete it</label>
+		<label for="userPass2" class="errorPassword" style="display: none">Passwords is not equal</label>
+		
+		<label for="userBirth">Birtday</label>
+		<input type="date" class="accountForm" id="userBirth" name="userBirth">
+		<label for="userBirth" class="emptyErrorMessage" style="display: none">Empty field , please complete it</label>
+		
+		<label for="userCountry">Country</label>
+		<select id="userCountry" class="accountForm" name="userCountry">
+			<option value="null" selected>Select Country</option>
+		</select>
+		<label for="userCountry" class="emptyErrorMessage" style="display: none">Empty field , please complete it</label>
+		
+		<label for="userCity">city</label>
+		<input type="text" class="accountForm" id="userCity" name="userCity">
+		<label for="userCity" class="emptyErrorMessage" style="display: none">Empty field , please complete it</label>
+		
+		<label for="userAddress">Address</label>
+		<input type="text" class="accountForm" id="userAddress" name="userAddress">
+		<label for="userAddress" class="emptyErrorMessage" style="display: none">Empty field , please complete it</label>
+
+		
+	</div>
+	
+		
+		<input type="button" name="" value="CREATE ACCOUNT" id="sendButton" name="">
+
+	<script type="text/javascript" src="../js/view/countries.js"></script>
+	<script type="text/javascript" src="../js/libreries/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/events.js"></script>
+
+	<script type="text/javascript" src="../js/controllers/createAccountController.js"></script>
+	<script type="text/javascript" src="../js/view/createAccountView.js"></script>
+	<script type="text/javascript" src="../js/createAccount.js"></script>
+</body>
+</html>

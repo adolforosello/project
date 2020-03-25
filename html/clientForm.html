@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="accountForm">
+		<label for="clientName">Name</label>
+		<input class= "accountForm" type="text" name="clientName"  id="clientName">
+		<label class="emptyErrorMessage" style="display: none" for="clientName">Empty field , please complete it</label> 
+
+		<label for="clientLastName">Last Name</label>
+		<input class= "accountForm" type="text" name="clientLastName"  id="clientLastName">
+		<label class="emptyErrorMessage" style="display: none" for="clientLastName">Empty field , please complete it</label> 
+
+		<label for="clientAddress">Address</label>
+		<input class= "accountForm" type="text" name="clientAddress"  id="clientAddress">
+		<label class="emptyErrorMessage" style="display: none" for="clientAddress">Empty field , please complete it</label> 
+
+		<label for="clientCity">City</label>
+		<input class= "accountForm" type="text" name="clientCity"  id="clientCity">
+		<label class="emptyErrorMessage" style="display: none" for="clientCity">Empty field , please complete it</label> 
+
+		<label for="userCountry">Country</label>
+		<select class= "accountForm" name="clientCountry"  id="userCountry"></select>
+		<label class="emptyErrorMessage" style="display: none" for="userCountry">Empty field , please complete it</label> 
+
+		<label for="clientPhone">Phone</label>
+		<input class= "accountForm" type="text" name="clientPhone"  id="clientPhone">
+		<label class="emptyErrorMessage" style="display: none" for="clientPhone">Empty field , please complete it</label> 
+		
+	</div>
+
+	<input type="button" name="" value="SAVE CLIENT" id="sendButton" name="">
+
+	<script type="text/javascript" src="../js/view/countries.js"></script>
+	<script type="text/javascript" src="../js/libreries/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/events.js"></script>
+
+	<script type="text/javascript" src="../js/controllers/createAccountController.js"></script>
+	<script type="text/javascript" src="../js/view/createAccountView.js"></script>
+	<script type="text/javascript" src="../js/addClients.js"></script>	
+</body>
+</html>
